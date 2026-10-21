@@ -1,0 +1,51 @@
+{
+  "device": "NVIDIA A800 80GB PCIe",
+  "protocol": "reset/predict/observe/predict/reset; 25v/50a, BF16, seed42",
+  "physical_robot_test": false,
+  "calls": [
+    {
+      "name": "reset",
+      "seconds": 0.5105604268610477
+    },
+    {
+      "name": "predict_initial",
+      "seconds": 14.678284220397472
+    },
+    {
+      "name": "observe_reference_48",
+      "seconds": 0.9455143921077251
+    },
+    {
+      "name": "predict_with_history",
+      "seconds": 7.368906196206808
+    },
+    {
+      "name": "reset_again",
+      "seconds": 0.14687691256403923
+    },
+    {
+      "name": "predict_initial_again",
+      "seconds": 14.844170678406954
+    },
+    {
+      "name": "original_preencoded_forecast",
+      "seconds": 14.97804395109415
+    }
+  ],
+  "load_seconds": 11.12820753082633,
+  "offline_latent_max_abs_difference": 0.0,
+  "original_forecast_max_abs_physical": 0.0,
+  "reset_repeat_max_abs_physical": 0.0,
+  "peak_allocated_gib": 26.828256130218506,
+  "peak_reserved_gib": 27.302734375,
+  "passed": true,
+  "date": "2026-10-21",
+  "fixture_description": "Piper four-task validation episode 2; first 49 source frames, sampled every 3; 48 recorded commands; no robot connected",
+  "tested_source_sha256": {
+    "piper_wam/policy.py": "79a8863cc7e4b6bc23fb70d98a7e7aac584e52dc3f8250738340a33081b8b439",
+    "piper_wam/preprocessing.py": "48b4f44053d18ae8e13457389855c8f7d3d24c1a4b204da0fe13e971406ac8e3",
+    "piper_wam/_vendor/lingbot_va/wan_va/modules/model.py": "71086a82f61df453701627e63805673b6fc04607a82334b32595d074d1c375a8",
+    "piper_wam/_vendor/lingbot_va/wan_va/wan_va_server.py": "9fec99175e0cea307545cace859d71d26ef45bb8a68cf194afc04bfedd1c56b8",
+    "verify_inference.py": "38da7666a099e9be34d963f0e92a84814bb1fe32a11fc9ea4a097835336647e2"
+  }
+}

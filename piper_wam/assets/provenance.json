@@ -1,0 +1,23 @@
+{
+  "model": "LingBot-VA Piper teacher",
+  "step": 30000,
+  "base_model": {
+    "repo_id": "robbyant/lingbot-va-base",
+    "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c"
+  },
+  "runtime": {
+    "repo": "https://github.com/Robbyant/lingbot-va",
+    "revision": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+    "modified_files_sha256": {
+      "wan_va/modules/model.py": "4b736fc986f09d6fa59b941ac6e64a5ffe04349d1bada641e0d1feda655fbfbb",
+      "wan_va/wan_va_server.py": "9fec99175e0cea307545cace859d71d26ef45bb8a68cf194afc04bfedd1c56b8"
+    },
+    "source_patch_in_model_repository": "https://huggingface.co/wkrfugs/lingbot-va-piper-4task-step30000/blob/bc103950dd60ba56793a1f59b2d680e5bd6a7af9/runtime/piper_inference.patch",
+    "included_runtime": "piper_wam/_vendor/lingbot_va (patch already applied)",
+    "distribution_changes": "Unrelated examples removed; flash-attn optional for torch backend; server retained; history adapter in piper_wam/policy.py. See vendor_manifest.json."
+  },
+  "weight_dtype": "float32",
+  "inference_compute_dtype": "bfloat16",
+  "checkpoint_type": "teacher, no EMA/target variant",
+  "full_training_state_included": false
+}

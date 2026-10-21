@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lingbot-va-piper-inference"
+version = "0.2.0"
+description = "Piper RGB-to-action inference for the LingBot-VA step30000 teacher"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+  "numpy==1.26.4", "Pillow", "torch==2.9.0", "torchvision==0.24.0",
+  "diffusers==0.36.0", "transformers==4.55.2", "accelerate", "einops", "easydict",
+  "ftfy", "safetensors", "sentencepiece", "protobuf", "tqdm", "imageio[ffmpeg]",
+  "websockets>=13", "msgpack", "huggingface_hub"
+]
+
+[project.optional-dependencies]
+attention = ["flash_attn"]
+
+[tool.setuptools.packages.find]
+include = ["piper_wam*"]
+namespaces = true
+
+[tool.setuptools.package-data]
+piper_wam = ["assets/*.json", "_vendor/lingbot_va/LICENSE.txt", "_vendor/lingbot_va/wan_va/utils/Simple_Remote_Infer/*.md"]

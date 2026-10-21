@@ -1,0 +1,61 @@
+{
+  "action_loss_weight": 1.0,
+  "action_snr_shift": 1.0,
+  "archive_after_validation": true,
+  "attention_windows": [
+    30
+  ],
+  "batch_size": 8,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "cfg_probability": 0.1,
+  "expected_global_batch_size": 32,
+  "gradient_accumulation_steps": 1,
+  "inference_checkpoints_to_keep": null,
+  "inference_save_interval": null,
+  "learning_rate": 2.5e-05,
+  "load_workers": 1,
+  "lr_schedule": {
+    "decay_steps": 30000,
+    "end_learning_rate": 2.5e-06,
+    "type": "openpi_warmup_cosine"
+  },
+  "max_grad_norm": 1.0,
+  "max_steps": 30000,
+  "optimizer_eps": 1e-08,
+  "precision": "bfloat16",
+  "sampler_tail_policy": "repeat_to_full_distributed_batch",
+  "save_final": true,
+  "save_interval": 2000,
+  "sequence_latents": 5,
+  "training_chunk_sizes": [
+    4
+  ],
+  "training_seed": 42,
+  "validation": {
+    "action_guidance": 1.0,
+    "action_snr_shift": 1.0,
+    "action_steps": 50,
+    "attention_window": 30,
+    "interval": 2000,
+    "phases": "early-middle-late",
+    "seed": 42,
+    "video_guidance": 5.0,
+    "video_snr_shift": 5.0,
+    "video_steps": 25,
+    "workers": 4
+  },
+  "video_loss_weight": 1.0,
+  "video_snr_shift": 5.0,
+  "warmup_steps": 1000,
+  "weight_decay": 1e-10,
+  "window_stride_latents": 4,
+  "initialization": "robbyant/lingbot-va-base@68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+  "train_episodes": 113,
+  "validation_episodes": 12,
+  "source_episodes": 125,
+  "world_size": 4,
+  "action_L1_is_optimization_loss": false
+}

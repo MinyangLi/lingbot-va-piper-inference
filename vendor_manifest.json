@@ -1,0 +1,31 @@
+{
+  "upstream": "https://github.com/Robbyant/lingbot-va",
+  "revision": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+  "note": "Inference subset; model.py and wan_va_server.py include the same local changes used for teacher validation.",
+  "files": {
+    "LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "wan_va/__init__.py": "82548e574a8b43d4bb1480e915ea993b526ed9f5fb761f8e65fdcaca601838e8",
+    "wan_va/configs/__init__.py": "2726395dce3fcc43838876041c60f2eb74747a3b719a9bba6be28955dfd0e724",
+    "wan_va/distributed/__init__.py": "013ec40a0739296f1ba474036e5d46e06998f795daa0b7c3214773d885a3ab1a",
+    "wan_va/distributed/fsdp.py": "cf5c7755e934f933645235f9104cae3ff9adea2b2863bcb1a5ec42eb6f3a8d8f",
+    "wan_va/distributed/util.py": "2513e68bcc1163424a7629ec88ce7a9b70c11342945d4ff0dc1801310d1e1648",
+    "wan_va/modules/__init__.py": "7de311f2f55aed977114d312b7a4f22c26a451aa4e5685040a37e20533d3d8b1",
+    "wan_va/modules/model.py": "71086a82f61df453701627e63805673b6fc04607a82334b32595d074d1c375a8",
+    "wan_va/modules/utils.py": "563499ae1aa9fdbe990963c8c133423241f1a63d3f59743b778a1eb4c47757f4",
+    "wan_va/utils/Simple_Remote_Infer/LEGAL.md": "adba50d9794b9ef3f7ec8cbc680f7f1fa3fbf9df0ac8d1f9b9ccab6d941bc11b",
+    "wan_va/utils/Simple_Remote_Infer/deploy/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "wan_va/utils/Simple_Remote_Infer/deploy/msgpack_numpy.py": "c37345c1d0ae4a0f27d91af4798af842986c255e7aa93b08255471cd3393eab1",
+    "wan_va/utils/Simple_Remote_Infer/deploy/websocket_policy_server.py": "441423a7ed7382c656247f51e1d53117252b6c92c802a175f8d5d6ec86db3d76",
+    "wan_va/utils/__init__.py": "c04beb288fa33eb00ee2362cc3a312d0614877d2afdb47c272ee76978731aaf5",
+    "wan_va/utils/logging.py": "3f894f412c096b15692b9adc5a3c4496447aee7e32a86f09562276fcbc2c7fd5",
+    "wan_va/utils/scheduler.py": "9833300936d1001e5dfb0db76d5e0e131429685980de7b3c9716288ec28da7f1",
+    "wan_va/utils/sever_utils.py": "d61e653a1541fc829786fcce61cb29e828407b0b1014f555c56c950d2d646e44",
+    "wan_va/utils/utils.py": "7d81e83d799b338db61e08bd52976fea404ed7db497d93199d4a478c592d2465",
+    "wan_va/wan_va_server.py": "9fec99175e0cea307545cace859d71d26ef45bb8a68cf194afc04bfedd1c56b8"
+  },
+  "distribution_changes": [
+    "Unrelated example configs and replay/Qwen/client modules removed; PiperPolicy supplies explicit settings.",
+    "model.py permits missing flash-attn for the existing torch-attention backend and reports an error only if flashattn is selected.",
+    "wan_va_server.py unchanged from teacher-validation runtime. Persistent RGB/history adaptation is in piper_wam/policy.py."
+  ]
+}

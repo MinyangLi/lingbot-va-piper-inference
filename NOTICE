@@ -1,0 +1,15 @@
+This package includes an inference subset of LingBot-VA by the Robbyant Team,
+with source headers also attributing the Alibaba Wan Team.
+Upstream: https://github.com/Robbyant/lingbot-va
+Base revision: 7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb
+License: Apache License, Version 2.0 (see LICENSE).
+
+model.py and wan_va_server.py include local fixes used for teacher validation.
+For this distribution, model.py additionally makes flash-attn optional for the
+existing torch attention backend. The server's sampling implementation is retained.
+Unrelated example configs/replay/Qwen/client files are omitted; configs/__init__.py
+is an empty registry because PiperPolicy constructs its own explicit configuration.
+
+The Piper adapter implements separate persistent camera caches and real observed
+video/issued-command history updates. Download/inference entry points and interface
+tests are local integration code. vendor_manifest.json records included file hashes.

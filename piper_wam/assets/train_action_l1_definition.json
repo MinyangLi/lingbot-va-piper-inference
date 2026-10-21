@@ -1,0 +1,14 @@
+{
+  "metric": "train_action_l1",
+  "dataset": "current training batch, approved 113 training episodes",
+  "normalization": "existing train-split q01/q99; no clipping",
+  "prediction": "clean_action_hat = noisy_action - sigma * predicted_flow_velocity",
+  "sigma": "action_timesteps / action_scheduler.num_train_timesteps",
+  "reference": "normalized clean action labels",
+  "reduction": "sum of absolute errors / count of valid scalar action elements across all ranks and accumulation microbatches",
+  "mask": "existing seven real action channels and valid non-padding times",
+  "forward_conditions": "unchanged training noise, CFG dropout, and teacher-forced context",
+  "backpropagation": false,
+  "extra_model_forwards": 0,
+  "note": "Training-time denoising L1, not a full sampled-rollout L1; collaborator implementation has not yet been matched."
+}

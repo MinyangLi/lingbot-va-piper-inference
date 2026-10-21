@@ -1,0 +1,28 @@
+{
+  "cameras": [
+    "observation.images.head",
+    "observation.images.hand"
+  ],
+  "action_channels": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    28
+  ],
+  "action_dim": 30,
+  "height": 224,
+  "width": 224,
+  "source_fps": 30,
+  "video_stride": 3,
+  "vae_temporal_stride": 4,
+  "actions_per_latent": 12,
+  "future_latents": 4,
+  "prediction_actions": 48,
+  "split_seed": 42,
+  "validation_per_task": 3,
+  "normalization": "train_q01_q99_unclipped",
+  "action_semantics": "absolute_joint_rad_gripper_m"
+}
